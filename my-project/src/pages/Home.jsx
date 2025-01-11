@@ -152,7 +152,7 @@ const HomePage = () => {
       <div className="space-y-4">
         {tasks.map((task) => (
           <div
-            key={task.id}
+            key={task._id}
             className="flex items-center justify-between p-4 border rounded-md shadow-sm"
           >
             <div className="flex items-center">

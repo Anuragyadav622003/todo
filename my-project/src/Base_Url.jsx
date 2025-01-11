@@ -1,2 +1,2 @@
-const Base_URL  = 'http://localhost:5000/';
+const Base_URL  = 'https://todo-five-peach-48.vercel.app/';
 export default Base_URL;

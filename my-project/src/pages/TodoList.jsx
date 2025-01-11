@@ -98,7 +98,7 @@ const TodoListPage = () => {
 
   const taskList = useMemo(
     () => tasks.map((task, index) => (
-      <TableRow key={task.id} sx={{ backgroundColor: index % 2 === 0 ? 'rgba(240, 240, 240, 0.5)' : 'white' }}>
+      <TableRow key={task._id} sx={{ backgroundColor: index % 2 === 0 ? 'rgba(240, 240, 240, 0.5)' : 'white' }}>
         <TableCell align="center">
           <Checkbox checked={task.status === 'Complete'} onChange={() => toggleTaskCompletion(task)} />
         </TableCell>
