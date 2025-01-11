@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -6,30 +7,46 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto flex justify-between items-center">
         <div className="text-white text-2xl font-bold">Taskify</div>
         <div className="space-x-6">
-          <a
-            href="/"
-            className="text-white hover:bg-indigo-800 px-4 py-2 rounded-lg transition-all duration-300"
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `text-white px-4 py-2 rounded-lg transition-all duration-300 ${
+                isActive ? 'bg-indigo-800' : 'hover:bg-indigo-800'
+              }`
+            }
           >
-        New Task
-          </a>
-          <a
-            href="/todo"
-            className="text-white hover:bg-indigo-800 px-4 py-2 rounded-lg transition-all duration-300"
+            New Task
+          </NavLink>
+          <NavLink
+            to="/todo"
+            className={({ isActive }) =>
+              `text-white px-4 py-2 rounded-lg transition-all duration-300 ${
+                isActive ? 'bg-indigo-800' : 'hover:bg-indigo-800'
+              }`
+            }
           >
             Dashboard
-          </a>
-          <a
-            href="/login"
-            className="text-white hover:bg-indigo-800 px-4 py-2 rounded-lg transition-all duration-300"
+          </NavLink>
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              `text-white px-4 py-2 rounded-lg transition-all duration-300 ${
+                isActive ? 'bg-indigo-800' : 'hover:bg-indigo-800'
+              }`
+            }
           >
             Login
-          </a>
-          <a
-            href="/register"
-            className="text-white hover:bg-indigo-800 px-4 py-2 rounded-lg transition-all duration-300"
+          </NavLink>
+          <NavLink
+            to="/register"
+            className={({ isActive }) =>
+              `text-white px-4 py-2 rounded-lg transition-all duration-300 ${
+                isActive ? 'bg-indigo-800' : 'hover:bg-indigo-800'
+              }`
+            }
           >
             Register
-          </a>
+          </NavLink>
         </div>
       </div>
     </nav>
